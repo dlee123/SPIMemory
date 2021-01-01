@@ -111,7 +111,10 @@
 // RTL8195A included - @boseji <salearj@hotmail.com> 02.03.17
   #define _delay_us(us) delayMicroseconds(us)
 #else
-  #include <util/delay.h>
+  // dlee - commented out temporarily while we figure 
+  // out why NRF52 was not defined for the Adafruit Feather nRF52840 Express board.
+  //#include <util/delay.h>
+  #define _delay_us(us) delayMicroseconds(us)
 #endif
 
 #define SPIFLASH_LIBVER 3
